@@ -1,6 +1,6 @@
 import sympy.ntheory.factor_ as factor
 #facts = factor.factorint(100)
-n = 1000
+n = 10
 mod = 10000000000
 #for key in facts.keys():
 #    n = n**(key**facts[key])
@@ -10,6 +10,7 @@ mod = 10000000000
 sum = 0
 for i in range(1,n+1):
     facts = factor.factorint(i)
+    print(facts)
     j=i
     for key in facts.keys():
         j = j**(key**facts[key])%mod
